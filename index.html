@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Offline Music Player</h1>
+        
+        <div class="file-input-container">
+            <label for="fileInput" class="file-input-label">
+                <i class="fas fa-plus"></i> Add Songs
+            </label>
+            <input type="file" id="fileInput" accept="audio/*" multiple>
+        </div>
+        
+        <div class="player">
+            <div class="now-playing">
+                <div class="song-cover" id="songCover">
+                    <i class="fas fa-music" style="font-size: 40px; color: #9ca3af;"></i>
+                </div>
+                <div class="song-info" id="songInfo">
+                    <h2>No song selected</h2>
+                    <p>Select a song to begin</p>
+                </div>
+            </div>
+            
+            <div class="progress-container" id="progressContainer">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-controls">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+            
+            <div class="controls">
+                <button class="control-btn" id="prevBtn" title="Previous">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="control-btn play-btn" id="playPauseBtn" title="Play/Pause">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="control-btn" id="nextBtn" title="Next">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="songs-container" id="songsContainer">
+            <div class="empty-state">
+                <i class="fas fa-music"></i>
+                <p>No songs added yet</p>
+                <p class="hint">Click "Add Songs" to add your music</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="notification" id="notification"></div>
+    
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
